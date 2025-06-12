@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Libre Baskerville", serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #F9FAFB;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    padding: 0 15px;
+    flex: 1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 1rem 2rem 1rem 1rem;
+    background-color: #C54F2B;
+}
+
+.conteudo-titulo{
+    display: flex;
+    position: relative;
+    padding: 0 20px;
+    overflow: hidden;
+    border-bottom: 2px dashed #333;
+}
+
+.entregador{
+    width: 30px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.title{
+    padding-bottom: 10px;
+}
+
+.pack{
+    width: 20px;
+    position: absolute;
+    bottom: 0;
+    animation: caixaEntrega 5s infinite linear;
+}
+
+.persona{
+    width: 30px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+@keyframes caixaEntrega {
+    from{
+        left: 20px;
+    }
+
+    to{
+        left: 95%;
+    }
+}
+
+h1 {
+    font-size: 3.0rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-shadow: 4px 4px 16px rgba(0,0,0,0.5);
+}
+
+.menu-button {
+    background-color: #C54F2B;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 23px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+    background-color: #C76547;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 2rem;
+    background-color: #FFFFFF;
+    min-width: 200px;
+    padding: 0.5rem 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.dropdown a {
+    display: block;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #C54F2B;
+    text-decoration: none;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.dropdown a:last-child {
+    border-bottom: none;
+}
+
+.dropdown a:hover {
+    background-color: #FAD4C0;
+    color: #9C2C0A;
+}
+
+.conteudo-texto, .conteudo-imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.imageMobile{
+    display: none;
+}
+
+.conteudo-texto {
+    flex-direction: column;
+    gap: 30px;
+}
+
+.conteudo-texto h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #9C2C0A;
+}
+
+.conteudo-texto p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #1A1A1A;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #C54F2B;
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+footer p {
+    font-size: 1.0rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-shadow: 8px 8px 16px rgba(0,0,0,0.5);
+}
+
+@media only screen and (max-width: 1000px){
+    main{
+        flex-direction: column;
+    }
+    .imageDesktop{
+        display: none;
+    }
+
+    .imageMobile{
+        display: block;
+    }
+}

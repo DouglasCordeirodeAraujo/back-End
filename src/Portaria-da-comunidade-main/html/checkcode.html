@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/checkcode.css">
+    <title>Portaria da Comunidade</title>
+</head>
+<body>
+    <header>
+        <a class="title" href="../index.html">
+          <h1>Portaria da Comunidade</h1>
+        </a>
+        <button class="menu-button" onclick="toggleDropdown()">☰ Menu</button>
+        <div class="dropdown" id="dropdownMenu">
+            <a href="login.html">Entrar</a>
+            <a href="register.html">Cadastre-se</a>
+            <a href="#">Seja um ponto parceiro</a>
+        </div>
+    </header>
+    <main>
+        <div class="checkcode-container">
+            <h2>Verifique seu Código</h2>
+            <p>Digite o código que você recebeu por e-mail</p>
+            <form id="verifyForm">
+                <input type="hidden" id="email" name="email">
+                <label for="codigo">Código de Verificação</label>
+                <input type="text" id="codigo" name="codigo" autocomplete="one-time-code" required>
+                <button type="submit">Verificar</button>
+                <p id="codigoErro" style="color:red; display:none;"></p>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>Desenvolvido por Douglas Araújo e Esley Gomes</p>
+        <p>&copy; Todos os direitos reservados</p>
+    </footer>
+    <script src="../js/common.js"></script>
+    <script src="../js/checkcode.js"></script>
+</body>
+</html>

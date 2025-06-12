@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style/mainScreen.css">
+    <title>Portaria da Comunidade</title>
+</head>
+
+<body>
+    <header>
+        <h1>Portaria da Comunidade</h1>
+        <button class="menu-button" onclick="toggleDropdown()">☰ Menu</button>
+        <div class="dropdown" id="dropdownMenu">
+            <a href="#">Perfil</a>
+            <a href="#">Sair</a>
+            <a href="#">Fale Conosco</a>
+            <a href="#">Seja um ponto parceiro</a>
+        </div>
+    </header>
+    <main class="conteudo">
+        <div class="conteudo-Perfil">
+            <div class="conteudo-Perfil-superior">
+                <h2>Encomendas:</h2>
+                <button id="botaoAbrirModal">Nova+</button>
+            </div>
+            <div class="conteudo-encomendas-pesquisa">
+                <input type="text" id="filtroPedido" placeholder="Número do Pedido:">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="conteudo-encomendas">
+            </div>
+        </div>
+        <div class="conteudo-principal">
+
+        </div>
+    </main>
+    <footer>
+        <p>Desenvolvido por Douglas Araújo e Esley Gomes</p>
+        <p>&copy; Todos os direitos reservados</p>
+    </footer>
+    <script src="/js/common.js"></script>
+    <script src="/js/mainScreen.js"></script>
+</body>
+
+</html>

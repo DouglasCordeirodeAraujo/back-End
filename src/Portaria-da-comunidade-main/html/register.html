@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/register.css">
+    <title>Portaria-da-Comunidade</title>
+</head>
+<body>
+    <header>
+        <a class="title" href="../index.html">
+          <h1>Portaria da Comunidade</h1>
+        </a>
+        <button class="menu-button" onclick="toggleDropdown()">☰ Menu</button>
+        <div class="dropdown" id="dropdownMenu">
+          <a href="login.html">Entrar</a>
+          <a href="#">Seja um ponto parceiro</a>
+        </div>
+      </header>
+      <main>
+        <div class="container">
+          <form id="formCadastro" aria-labelledby="cadastro-title">
+            <h2 id="cadastro-title" class="container-cadastro">Cadastre-se:</h2>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" autocomplete="name" placeholder="Digite Seu Nome" required />
+
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" id="sobrenome" name="sobrenome" autocomplete="family-name" placeholder="Digite Seu Sobrenome" required />
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="Digite Um Email Válido" required />
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" autocomplete="new-password" placeholder="Minimo 6 Caracteres" required minlength="6" />
+
+            <label for="dataNascimento">Data de Nascimento:</label>
+            <input type="date" id="dataNascimento" name="dataNascimento" autocomplete="bday" required />
+
+            <button type="submit">Cadastrar-se</button>
+          </form>
+        </div>
+      </main>
+      <footer>
+        <p>Desenvolvido por Douglas Araújo e Esley Gomes</p>
+        <p>&copy; Todos os direitos reservados</p>
+      </footer>
+      <script src="../js/common.js"></script>
+      <script src="../js/register.js"></script>
+</body>
+</html>

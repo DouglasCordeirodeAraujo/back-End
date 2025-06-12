@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Libre Baskerville", serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: #F9FAFB;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #C54F2B;
+}
+
+h1 {
+    font-size: 3.0rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.menu-button {
+    background-color: #C54F2B;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 23px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+    background-color: #C76547;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 2rem;
+    background-color: #FFFFFF;
+    min-width: 200px;
+    padding: 0.5rem 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.dropdown a {
+    display: block;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #C54F2B;
+    text-decoration: none;
+    border-bottom: 1px solid #F0F0F0;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.dropdown a:last-child {
+    border-bottom: none;
+}
+
+.dropdown a:hover {
+    background-color: #FAD4C0;
+    color: #9C2C0A;
+}
+
+.conteudo {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+    min-height: calc(100vh - 164px);
+    overflow: hidden;
+}
+
+.conteudo-Perfil {
+    position: sticky;
+    top: 0;
+    max-height: calc(100vh - 164px);
+    width: 300px;
+    background-color: #FAD4C0;
+    overflow-y: scroll;
+    padding: 1rem;
+    flex-shrink: 0;
+    box-shadow: 4px 0 8px -2px rgba(0, 0, 0, 0.12);
+}
+
+.conteudo-Perfil-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.conteudo-Perfil-superior h2 {
+    font-size: 1.0rem;
+    color: #9C2C0A;
+}
+
+.conteudo-Perfil-superior button {
+    font-size: 0.8rem;
+    color: #FFFFFF;
+    background-color: #C76547;
+    padding: 5px;
+    border: 1px solid #C76547;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.conteudo-Perfil-superior button:hover {
+    background-color: #9C2C0A;
+}
+
+.conteudo-encomendas-pesquisa {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 10px;
+}
+
+.conteudo-encomendas-pesquisa input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.conteudo-encomendas-pesquisa button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    padding-right: 10px;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.conteudo-encomendas {
+    text-align: center;
+}
+
+.conteudo-encomendas a {
+    display: block;
+    margin-bottom: 8px;
+    color: #C54F2B;
+    text-decoration: none;
+}
+
+.conteudo-encomendas a:hover {
+    background-color: #C76547;
+    color: #F0F0F0;
+    border-radius: 5px;
+}
+
+.conteudo-principal {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+.form-encomenda {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #FAD4C0;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-encomenda h2 {
+    color: #C54F2B;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.form-encomenda label {
+    display: flex;
+    font-weight: bold;
+    color: #9C2C0A;
+    margin-top: 1rem;
+}
+
+/* CAMPOS DE TEXTO, SELECT, TEXTAREA */
+.form-encomenda input[type="text"],
+.form-encomenda textarea,
+.form-encomenda select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #fffaf7;
+}
+
+.form-encomenda textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-encomenda input[type="radio"] {
+    margin-right: 5px;
+    accent-color: #C54F2B;
+}
+
+/* BOTÃO ENVIAR */
+.form-encomenda button[type="submit"] {
+    margin-top: 1.5rem;
+    padding: 10px 20px;
+    background-color: #C54F2B;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-encomenda button[type="submit"]:hover {
+    background-color: #9C2C0A;
+}
+
+#formNovaEncomenda label[for="perecivel"],
+#formNovaEncomenda label[for="produto_fragil"] {
+    display: inline-block;
+    width: 100%;
+    font-weight: bold;
+    color: #9C2C0A;
+    margin-top: 1rem;
+}
+
+/* Estiliza os labels "Sim"/"Não" ao lado dos radios */
+#formNovaEncomenda label[for="perecivel"] + label,
+#formNovaEncomenda label[for="perecivel"] + label + label,
+#formNovaEncomenda label[for="produto_fragil"] + label,
+#formNovaEncomenda label[for="produto_fragil"] + label + label {
+    display: inline-block;
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+    font-weight: normal;
+    color: #9C2C0A;
+}
+
+.conteudo_detalhe{
+    display: flex;
+    flex-direction: column;
+    background-color: #FAD4C0;
+    width: 80%;
+    gap: 10px;
+    margin: 0 2rem;
+    padding: 1rem;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.conteudo_detalhe h2{
+    color: #9C2C0A;
+    font-weight: bold;
+    font-size: 2.0rem;
+}
+
+.conteudo_detalhe strong{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+.conteudo_detalhe p{
+    font-weight: bold;
+    color: #9C2C0A;
+}
+
+.conteudo_detalhe button {
+    width: 80px;
+    padding: 5px;
+    font-size: 1.0rem;
+    font-weight: bold;
+    background-color: #C76547;
+    color: #F9FAFB;
+    border: none;
+    border-radius: 10px;
+}
+
+.conteudo_detalhe button:hover{
+    background-color: #9C2C0A;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #C54F2B;
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+footer p {
+    font-size: 1.0rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
+}

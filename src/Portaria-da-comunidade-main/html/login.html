@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portaria da Comunidade</title>
+    <link rel="stylesheet" href="../style/login.css">
+</head>
+<body>
+    <header>
+        <a class="title" href="../index.html">
+          <h1>Portaria da Comunidade</h1>
+        </a>
+        <button class="menu-button" onclick="toggleDropdown()">☰ Menu</button>
+        <div class="dropdown" id="dropdownMenu">
+            <a href="register.html">Cadastre-se</a>
+            <a href="#">Seja um ponto parceiro</a>
+        </div>
+    </header>
+    <main>
+        <div class="login-container">
+            <h2 id="login-title">Entrar</h2>
+            <form id="formlogin" aria-labelledby="login-title">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="Digite seu email" required />
+
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" autocomplete="current-password" placeholder="Digite sua senha" required />
+                
+                <div class="forgot-password">
+                    <a href="forgotPassword.html">Esqueceu a senha?</a>
+                </div>
+                
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>Desenvolvido por Douglas Araújo e Esley Gomes</p>
+        <p>&copy; Todos os direitos reservados</p>
+    </footer>
+    <script src="../js/common.js"></script>
+    <script src="../js/login.js"></script>
+</body>
+</html>
